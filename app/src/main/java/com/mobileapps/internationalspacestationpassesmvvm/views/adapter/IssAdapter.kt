@@ -10,7 +10,7 @@ import com.mobileapps.internationalspacestationpassesmvvm.model.Iss.Response
 import kotlinx.android.synthetic.main.iss_item.view.*
 
 
-class IssAdapter(private val responses: ArrayList<Response>) : RecyclerView.Adapter<IssAdapter.ViewHolder>()
+class IssAdapter(private val responses: List<Response>) : RecyclerView.Adapter<IssAdapter.ViewHolder>()
 {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflatedView = parent.inflate(R.layout.iss_item)
