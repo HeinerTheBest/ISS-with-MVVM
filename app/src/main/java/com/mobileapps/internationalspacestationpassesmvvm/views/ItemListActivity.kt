@@ -26,7 +26,7 @@ class ItemListActivity : AppCompatActivity() {
 
         viewModel = ViewModelProviders.of(this).get(ItemListViewModel::class.java)
 
-        viewModel.getList().observe(this, Observer
+        viewModel.getList(this).observe(this, Observer
         {
             viewModel ->
             adapter = IssAdapter(viewModel!!.response)
