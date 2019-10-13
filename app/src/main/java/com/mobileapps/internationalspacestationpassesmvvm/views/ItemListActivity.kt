@@ -2,7 +2,6 @@ package com.mobileapps.internationalspacestationpassesmvvm.views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -30,7 +29,6 @@ class ItemListActivity : AppCompatActivity() {
         viewModel.getList().observe(this, Observer
         {
             viewModel ->
-            Log.d("Heiner",viewModel.toString())
             adapter = IssAdapter(viewModel!!.response)
             rvIssResponse.layoutManager  = LinearLayoutManager(this)
             recyclerView.adapter = adapter
